@@ -1,0 +1,27 @@
+class PaysState {
+  final Pays? pays;
+
+  const PaysState({this.pays});
+}
+
+class PaysInitial extends PaysState {}
+
+class PaysLoaded extends PaysState {
+  const PaysLoaded(Pays pays) : super(pays: pays);
+}
+
+class Pays {
+  final String name;
+  final String capital;
+  final String population;
+  final String langue;
+  final String drapeau;
+
+  const Pays(this.name, this.capital, this.population, this.langue, this.drapeau);
+
+  String get getName => name;
+  String get getCapital => capital;
+  String get getPopulation => population;
+  String get getLangue => langue;
+  String get getDrapeau => drapeau;
+}
